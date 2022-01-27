@@ -22,6 +22,6 @@ zip -r osx.zip mac/
 
 gh release create $tag
 
-gh release upload $tag windows.zip
-gh release upload $tag linux.zip
-gh release upload $tag osx.zip
+gh release upload $tag windows.zip --clobber
+gh release upload $tag linux.zip --clobber
+gh release upload $tag osx.zip --clobber
