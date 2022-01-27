@@ -9,6 +9,9 @@
    id="svg5"
    inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20, custom)"
    sodipodi:docname="icon.svg"
+   inkscape:export-filename="/home/bajtix/Projects/Senter/senter-cli/senter.ico"
+   inkscape:export-xdpi="96.000008"
+   inkscape:export-ydpi="96.000008"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -134,7 +137,7 @@
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect19912-7-6);fill:#000000;fill-opacity:0.50928736;stroke:none;filter:url(#filter27210)"><tspan
          x="22.957031"
          y="71.832813"
-         id="tspan27253">せ</tspan></text>
+         id="tspan27296">せ</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(1.7377206,0,0,1.7377206,-39.633754,-64.753863)"
@@ -142,6 +145,6 @@
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect19912-7);fill:#ffffff;fill-opacity:1;stroke:none"><tspan
          x="22.957031"
          y="71.832813"
-         id="tspan27255">せ</tspan></text>
+         id="tspan27298">せ</tspan></text>
   </g>
 </svg>

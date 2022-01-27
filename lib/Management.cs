@@ -31,7 +31,7 @@ public static class Management {
     }
 
     public static string GetTempPath(Downloadable d) {
-        return $"{Path.Combine(SenterSettings.tmpPath, d.app.name)}_{d.version}_{d.platform}.zip";
+        return $"{Path.Combine(SenterSettings.tmpPath, d.app.name)}_{d.version.version}_{d.platform}.zip";
     }
 
     public static string GetInstallationPath(Downloadable d) {

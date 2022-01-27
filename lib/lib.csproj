@@ -10,7 +10,7 @@
   <PropertyGroup>
     <PackageId>Senter.Communication</PackageId>
     <Authors>bajtixone</Authors>
-    <Version>0.5.1</Version>
+    <Version>0.5.2</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild> 
   </PropertyGroup>
 </Project>
