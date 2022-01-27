@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="256"
+   height="256"
+   viewBox="0 0 67.733332 67.733332"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20, custom)"
+   sodipodi:docname="icon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     width="64px"
+     inkscape:zoom="2.1190784"
+     inkscape:cx="-23.12326"
+     inkscape:cy="146.29001"
+     inkscape:window-width="2560"
+     inkscape:window-height="1027"
+     inkscape:window-x="1920"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer2" />
+  <defs
+     id="defs2">
+    <rect
+       x="22.957694"
+       y="31.633408"
+       width="167.91086"
+       height="162.83877"
+       id="rect19912" />
+    <rect
+       x="31.700251"
+       y="66.203294"
+       width="162.30484"
+       height="107.04646"
+       id="rect1838" />
+    <rect
+       x="22.957693"
+       y="31.633408"
+       width="167.91086"
+       height="162.83878"
+       id="rect19912-7" />
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter26280"
+       x="-0.24028133"
+       y="-0.1724861"
+       width="1.4805627"
+       height="1.3449722">
+      <feGaussianBlur
+         stdDeviation="3.57219 2"
+         result="fbSourceGraphic"
+         id="feGaussianBlur26278" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix26300" />
+      <feGaussianBlur
+         id="feGaussianBlur26302"
+         stdDeviation="2 2"
+         result="blur"
+         in="fbSourceGraphic" />
+    </filter>
+    <rect
+       x="22.957693"
+       y="31.633408"
+       width="167.91086"
+       height="162.83878"
+       id="rect19912-7-6" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter27210"
+       x="-0.068658385"
+       y="-0.076412949"
+       width="1.1373168"
+       height="1.1528259">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.0035567"
+         id="feGaussianBlur27212" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text1836"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:'Noto Sans';white-space:pre;shape-inside:url(#rect1838);fill:#000000;fill-opacity:1;stroke:none;-inkscape-font-specification:'Noto Sans';font-stretch:normal;font-variant:normal" />
+    <rect
+       style="fill:#000000;fill-opacity:0.39438465;stroke-width:0.334658;filter:url(#filter26280)"
+       id="rect22392-2"
+       width="55.656658"
+       height="55.656658"
+       x="6.038342"
+       y="6.0383401"
+       ry="7.3463569" />
+    <rect
+       style="fill:#8800aa;stroke-width:0.300257"
+       id="rect22392"
+       width="49.935577"
+       height="49.935577"
+       x="8.8988791"
+       y="8.8988791"
+       ry="6.591207" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2">
+    <text
+       xml:space="preserve"
+       transform="matrix(1.7377206,0,0,1.7377206,-39.633756,-64.753865)"
+       id="text19910-1"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect19912-7-6);fill:#000000;fill-opacity:0.50928736;stroke:none;filter:url(#filter27210)"><tspan
+         x="22.957031"
+         y="71.832813"
+         id="tspan27253">せ</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(1.7377206,0,0,1.7377206,-39.633754,-64.753863)"
+       id="text19910"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect19912-7);fill:#ffffff;fill-opacity:1;stroke:none"><tspan
+         x="22.957031"
+         y="71.832813"
+         id="tspan27255">せ</tspan></text>
+  </g>
+</svg>
