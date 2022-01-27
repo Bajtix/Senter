@@ -12,6 +12,8 @@ dotnet publish -C Release --os win --sc -o Build/win/
 dotnet publish -C Release --os linux --sc -o Build/lin/
 dotnet publish -C Release --os osx --sc -o Build/mac/
 
+pause
+
 cd Build
 
 zip -r windows.zip win/
