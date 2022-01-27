@@ -8,9 +8,9 @@ git add .
 git commit -S -m "release commit $tag"
 git push
 
-dotnet publish -C Release --os win --sc -o Build/win/
-dotnet publish -C Release --os linux --sc -o Build/lin/
-dotnet publish -C Release --os osx --sc -o Build/mac/
+dotnet publish -c Release --os win --sc -o Build/win/
+dotnet publish -c Release --os linux --sc -o Build/lin/
+dotnet publish -c Release --os osx --sc -o Build/mac/
 
 pause
 
