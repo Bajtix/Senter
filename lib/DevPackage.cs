@@ -38,6 +38,7 @@ public static class DevPackage {
 
     public static void SaveLocalDB() {
         string json = JsonConvert.SerializeObject(devPackages);
+        Directory.CreateDirectory(SenterSettings.devPath);
         File.WriteAllText(Path.Combine(SenterSettings.devPath, "manifest.json"), json);
     }
 
@@ -72,22 +73,25 @@ public static class DevPackage {
         // first, we deserialize into an App type
         var application = JsonConvert.DeserializeObject<App>(File.ReadAllText(manifestPath));
         // now we need to check whether the app has an id assigned in the manifest. If this is not the case, we need to retrieve it from the server
-        if (application.id != -1) throw new Exception("App is already a registered package");
+        if (application.id == -1) {
+            // get next id from the server. This also creates an empty package on the server. We also have the id now. 
+            int id = RequestNewPackage();
 
-        // get next id from the server. This also creates an empty package on the server. We also have the id now. 
-        int id = RequestNewPackage();
-
-        application.id = id;
-        WriteToManifest(manifestPath, application);
+            application.id = id;
+            WriteToManifest(manifestPath, application);
+        }
 
         AddPackage(new DevApp(application, manifestPath));
+
+        devPackages.Last().GetVersions();
 
         Management.Connect(); // refresh server so no exceptions are thrown later
 
     }
 
     public static void AddPackage(DevApp applcication) {
-        devPackages.Add(applcication);
+        if (!devPackages.Contains(applcication))
+            devPackages.Add(applcication);
         SaveLocalDB();
     }
 
