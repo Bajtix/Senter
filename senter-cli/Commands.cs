@@ -46,8 +46,10 @@ public static class Commands {
     [Command("dev", "enter developer mode")]
     [Command("d", "enter developer mode")]
     public static void CDev(string[] obj, Command myself) {
-
-
+        if (!Utils.isOnline) {
+            Error(myself, "Cannot enter dev mode while offline!");
+            return;
+        }
 
         string pass;
         if (SenterSettings.devPassword != "") {
@@ -68,8 +70,8 @@ public static class Commands {
         }
     }
 
-    [Command("devnew", "create new package", "folder")]
-    [Command("dnew", "create new package", "folder")]
+    [Command("devnew", "create new package or locate an existing one", "folder")]
+    [Command("dnew", "create new package or locate an existing one", "folder")]
     public static void CDevNew(string[] obj, Command myself) {
         if (DevPackage.currentToken.IsExpired) {
             Error(myself, "Developer token expired");
@@ -89,8 +91,8 @@ public static class Commands {
         DevPackage.CreatePackage(folder);
     }
 
-    [Command("devupdate", "update package on the server", "app")]
-    [Command("dupdate", "update package on the server", "app")]
+    [Command("devupdate", "update devpackage on the server", "app")]
+    [Command("dupdate", "update devpackage on the server", "app")]
     public static void CDevUpdate(string[] obj, Command myself) {
         if (DevPackage.currentToken.IsExpired) {
             Error(myself, "Developer token expired");
