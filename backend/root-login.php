@@ -7,7 +7,7 @@ verify_token();
 $servername = "localhost";
 $username = "dev";
 $password = file_get_contents("rootpass.txt");
-$db = "software";
+$db = "senter";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $db);
