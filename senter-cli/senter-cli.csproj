@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
     <ApplicationIcon>senter.ico</ApplicationIcon>
-    <Version>0.8.4.2</Version>
+    <Version>0.8.4.3</Version>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="../lib/lib.csproj"/>
