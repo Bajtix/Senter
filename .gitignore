@@ -4,3 +4,6 @@ senter-cli/senter-settings.json
 senter-cli/nuget.config
 [Bb]uild/
 */[Bb]uild/
+
+
+*pass.txt
