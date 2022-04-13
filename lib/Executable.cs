@@ -54,8 +54,8 @@ public class Executable {
             RedirectStandardError = false,
             UseShellExecute = false
         };
-        // ThreadStart ts = new ThreadStart(() => Process.Start(pinfo));
-        // new Thread(ts).Start();
+        ThreadStart ts = new ThreadStart(() => Process.Start(pinfo));
+        new Thread(ts).Start();
         Process.Start(pinfo);
     }
 

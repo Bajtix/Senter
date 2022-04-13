@@ -89,12 +89,30 @@ public static class Utils {
     static bool lockthr = false;
 
 
-    public static void PrintProgress(DownloadProcess process, DownloadProgressChangedEventArgs obj) {
+    public static void PrintDownloadProgress(DownloadProcess process, DownloadProgressChangedEventArgs obj) {
         if (lockthr) return;
         lockthr = true;
         Console.CursorTop = progressDialogTop;
         Console.CursorLeft = 1;
         string twr = $"{process.downloadable.version.version} |";
+        for (int i = 0; i <= obj.ProgressPercentage / 2; i++) {
+            twr += "■";
+        }
+        for (int i = obj.ProgressPercentage / 2; i < 50; i++) {
+            twr += " ";
+        }
+        twr += ($"| {obj.ProgressPercentage}%");
+        Console.CursorLeft = 1;
+        Console.Write(twr);
+        lockthr = false;
+    }
+
+    public static void PrintUploadProgress(UploadProcess process, UploadProgressChangedEventArgs obj) {
+        if (lockthr) return;
+        lockthr = true;
+        Console.CursorTop = progressDialogTop;
+        Console.CursorLeft = 1;
+        string twr = $"{process.uploadable.version.version} |";
         for (int i = 0; i <= obj.ProgressPercentage / 2; i++) {
             twr += "■";
         }
@@ -115,6 +133,13 @@ public static class Utils {
         return output;
     }
 
+    public static void PrintUploaded(UploadProcess process) {
+        Console.CursorTop++;
+        Console.CursorLeft = 0;
+        Console.WriteLineStyled($"Finished uploading {process.uploadable}", Commands.globalStyle);
+        consoleBlocked = false;
+    }
+
     public static void PrintInstalled(DownloadProcess process) {
         Console.CursorTop++;
         Console.CursorLeft = 0;
@@ -125,6 +150,12 @@ public static class Utils {
     public static void PrintStartDownload(DownloadProcess process) {
         progressDialogTop = Console.CursorTop + 1;
         Console.WriteLineStyled($"Downloading {process.downloadable}", Commands.globalStyle);
+        consoleBlocked = true;
+    }
+
+    public static void PrintStartUpload(UploadProcess process) {
+        progressDialogTop = Console.CursorTop + 1;
+        Console.WriteLineStyled($"Uploading {process.uploadable}", Commands.globalStyle);
         consoleBlocked = true;
     }
 }

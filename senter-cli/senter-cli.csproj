@@ -4,9 +4,9 @@
     <TargetFramework>net6.0</TargetFramework>
     <RootNamespace>senter_cli</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
     <ApplicationIcon>senter.ico</ApplicationIcon>
-    <Version>0.8.4</Version>
+    <Version>0.8.4.2</Version>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="../lib/lib.csproj"/>

@@ -160,7 +160,12 @@ public static class Commands {
             return;
         }
 
-        appversion.UploadArtifact(platform);
+        appversion.PrepareArtifacts();
+        var upload = appversion.artifacts[platform].StartUpload();
+
+        Utils.PrintStartUpload(upload);
+        upload.onUploadProgress += (a) => Utils.PrintUploadProgress(upload, a);
+        upload.onUploadFinish += (a) => Utils.PrintUploaded(upload);
     }
 
     [Command("devremove", "remove devpackage from dev repo", "app")]
@@ -495,7 +500,7 @@ public static class Commands {
 
         var download = appversion.downloadables[platform].StartDownload();
         Utils.PrintStartDownload(download);
-        download.onDownloadProgress += (a) => Utils.PrintProgress(download, a);
+        download.onDownloadProgress += (a) => Utils.PrintDownloadProgress(download, a);
         download.onInstallFinish += () => Utils.PrintInstalled(download);
     }
 

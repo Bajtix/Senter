@@ -28,7 +28,7 @@ public class DevApp : App {
         version.manifestPath = potentialManifestPath;
 
         if (Management.remote.GetById(id) == null) {
-            throw new Exception("The app doesnt exist on server");
+            throw new Exception($"Developer mode indexing failed, the app {name}[{id}] is not pressent on the server.");
         }
 
         if (version.id <= 0) {

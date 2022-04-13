@@ -9,6 +9,8 @@ public class DevVersion : Version, IComparable<DevVersion> {
 
     public string win, lin, mac;
 
+    public Dictionary<Platform, Uploadable> artifacts = new Dictionary<Platform, Uploadable>();
+
     public void SendVersion() {
         var r = DevPackage.MakeRequest("update-version.php", new()
         {
@@ -25,6 +27,20 @@ public class DevVersion : Version, IComparable<DevVersion> {
         Console.WriteLine(r);
     }
 
+    public void PrepareArtifacts() {
+        if (artifacts.Count > 0) return;
+        MakeArtifact(Platform.win);
+        MakeArtifact(Platform.lin);
+        MakeArtifact(Platform.mac);
+    }
+
+    private void MakeArtifact(Platform p) {
+        var dirName = p.ToString();
+        var directory = Path.Combine(Path.GetDirectoryName(manifestPath), dirName);
+        artifacts.Add(p, new Uploadable(directory, p, this));
+    }
+
+    [Obsolete]
     public void UploadArtifact(Platform platform) {
         var dirName = platform.ToString();
         var directory = Path.Combine(Path.GetDirectoryName(manifestPath), dirName);

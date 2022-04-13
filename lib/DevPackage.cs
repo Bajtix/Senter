@@ -52,11 +52,11 @@ public static class DevPackage {
 
         currentToken = JsonConvert.DeserializeObject<Token>(reponse);
 
-        return !currentToken.IsExpired;
+        return AssertAuth();
     }
 
     public static bool AssertAuth() {
-        return currentToken.IsExpired;
+        return !currentToken.IsExpired;
     }
 
     private static void CreateEmptyManifest(string path) {

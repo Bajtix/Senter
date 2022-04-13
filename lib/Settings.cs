@@ -27,13 +27,12 @@ public static class SenterSettings {
     public static string settingsPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/senter/senter-settings.json";
 
 
-
     public static Settings settings = new Settings();
 
     public class Settings {
         public string libraryPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "/senter/library/";
         public string tmpPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "/senter/tmp/";
-        public string host = "http://mc.bajtix.xyz:8080/senter/";
+        public string host = "http://mc.bajtix.xyz:8080/senter/backend"; // configure it to your own, if you have one!
         public string devPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "/senter/dev/";
         public string devPassword = "";
     }
