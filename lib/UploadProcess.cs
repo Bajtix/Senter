@@ -49,12 +49,13 @@ public class UploadProcess {
 
     }
 
-    private void UploadFinished(object sender, AsyncCompletedEventArgs args) {
+    private void UploadFinished(object sender, UploadFileCompletedEventArgs args) {
         if (args.Cancelled) {
             sentBytes = -1;
             return;
         }
         Console.WriteLine(args.Error);
+        Console.WriteLine(System.Text.Encoding.UTF8.GetString(args.Result));
 
         if (onUploadFinish != null) onUploadFinish.Invoke(args);
 

@@ -56,7 +56,7 @@ public class Executable {
         };
         ThreadStart ts = new ThreadStart(() => Process.Start(pinfo));
         new Thread(ts).Start();
-        Process.Start(pinfo);
+        //Process.Start(pinfo);
     }
 
     public void Remove() {
