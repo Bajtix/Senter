@@ -19,6 +19,8 @@ public class DevApp : App {
         foreach (var cd in Directory.GetDirectories(dir)) {
             AddVersionFromDirectory(cd);
         }
+
+        versions.Sort((a, b) => a.id.CompareTo(b.id));
     }
 
     public void AddVersionFromDirectory(string cd) {
@@ -87,9 +89,5 @@ public class DevApp : App {
         Console.WriteLine(res);
 
         GetVersions();
-
-        foreach (var version in versions) {
-            version.SendVersion();
-        }
     }
 }

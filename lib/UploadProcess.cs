@@ -27,6 +27,8 @@ public class UploadProcess {
 
         if (Directory.GetFiles(localPath).Length <= 0) {
             Console.WriteLine($"directory {localPath} is empty");
+            UploadFinished(null, null);
+            return;
         }
         if (File.Exists(targetZip)) File.Delete(targetZip);
         var t = new Task(() => ZipFile.CreateFromDirectory(localPath, targetZip));
@@ -50,6 +52,11 @@ public class UploadProcess {
     }
 
     private void UploadFinished(object sender, UploadFileCompletedEventArgs args) {
+        if (args == null) {
+            sentBytes = -1;
+            return;
+        }
+
         if (args.Cancelled) {
             sentBytes = -1;
             return;

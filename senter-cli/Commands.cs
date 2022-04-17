@@ -101,6 +101,9 @@ public static class Commands {
 
         DevPackage.UpdateDbFromManifests();
 
+        Platform platform = Management.GetCurrentPlatform();
+        string version = "latest";
+
         DevApp fapp;
 
         if (obj.Length >= 1) {
@@ -113,8 +116,29 @@ public static class Commands {
             UsageError(myself);
             return;
         }
+        if (obj.Length >= 2)
+            version = obj[1];
+        if (obj.Length >= 3)
+            platform = Utils.ParsePlatform(obj[2]);
 
-        fapp.UpdatePackage();
+        fapp.GetVersions();
+
+        DevVersion appversion;
+        if (version == "latest")
+            appversion = fapp.versions.Last();
+        else
+            appversion = fapp.versions.GetVersionByName(version);
+
+
+        if (appversion == null) {
+            Console.WriteLine("Updating app...");
+            fapp.UpdatePackage();
+            return;
+        }
+
+        Console.WriteLine("Updating version...");
+
+        appversion.SendVersion();
     }
 
 
@@ -147,6 +171,8 @@ public static class Commands {
             version = obj[1];
         if (obj.Length >= 3)
             platform = Utils.ParsePlatform(obj[2]);
+
+        fapp.GetVersions();
 
         DevVersion appversion;
         if (version == "latest")
